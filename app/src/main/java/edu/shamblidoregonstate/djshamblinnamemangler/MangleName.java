@@ -34,6 +34,14 @@ public class MangleName extends AppCompatActivity {
             }
         });
 
+        mReset = (Button) findViewById(R.id.button_reset);
+        mReset.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                mMangledName.setText(firstName);
+            }
+        });
+
 
 
     }
