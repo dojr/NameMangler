@@ -12,6 +12,7 @@ public class Main extends AppCompatActivity {
 
     private Button mButtonMangle;
     private EditText mFirstNameText;
+    private static final int REQUEST_RESET = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +29,9 @@ public class Main extends AppCompatActivity {
                     Toast.makeText(Main.this, "Name cannot be empty", Toast.LENGTH_SHORT)
                             .show();
                 } else {
-                    Intent MangleName = new Intent(Main.this, MangleName.class);
-                    MangleName.putExtra("FirstName", mFirstNameText.getText().toString());
-
-                    startActivity(MangleName);
+                    Intent intent = MangleName.newIntent(Main.this, mFirstNameText.getText().toString());
+                    mFirstNameText.setText("");
+                    startActivityForResult(intent, REQUEST_RESET);
                 }
             }
         });
