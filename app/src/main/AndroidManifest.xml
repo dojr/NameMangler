@@ -16,8 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MangleName" android:configChanges="orientation|screenSize">
+        <activity android:name=".MangleNameNicely" android:configChanges="orientation|screenSize">
             <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MangleNameRudely" android:configChanges="orientation|screenSize">
+        <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

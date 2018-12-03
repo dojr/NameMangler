@@ -10,7 +10,8 @@ import android.widget.Toast;
 
 public class Main extends AppCompatActivity {
 
-    private Button mButtonMangle;
+    private Button mButtonMangleNicely;
+    private Button mButtonMangleRudely;
     private EditText mFirstNameText;
     private static final int REQUEST_RESET = 0;
 
@@ -21,15 +22,32 @@ public class Main extends AppCompatActivity {
 
         mFirstNameText = (EditText) findViewById(R.id.first_name_text);
 
-        mButtonMangle = (Button) findViewById(R.id.button_mangle);
-        mButtonMangle.setOnClickListener(new View.OnClickListener() {
+        mButtonMangleNicely = (Button) findViewById(R.id.button_mangle_nicely);
+        mButtonMangleNicely.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mFirstNameText.getText().length() <= 0) {
                     Toast.makeText(Main.this, "Name cannot be empty", Toast.LENGTH_SHORT)
                             .show();
                 } else {
-                    Intent intent = MangleName.newIntent(Main.this, mFirstNameText.getText().toString());
+                    Intent intent = MangleNameNicely.newIntent
+                            (Main.this, mFirstNameText.getText().toString());
+                    mFirstNameText.setText("");
+                    startActivityForResult(intent, REQUEST_RESET);
+                }
+            }
+        });
+
+        mButtonMangleRudely = (Button) findViewById(R.id.button_mangle_rudely);
+        mButtonMangleRudely.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mFirstNameText.getText().length() <= 0) {
+                    Toast.makeText(Main.this, "Name cannot be empty", Toast.LENGTH_SHORT)
+                            .show();
+                } else {
+                    Intent intent = MangleNameRudely.newIntent
+                            (Main.this, mFirstNameText.getText().toString());
                     mFirstNameText.setText("");
                     startActivityForResult(intent, REQUEST_RESET);
                 }

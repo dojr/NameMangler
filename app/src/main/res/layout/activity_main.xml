@@ -47,10 +47,16 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/button_mangle"
+            android:id="@+id/button_mangle_nicely"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mangle Name" />
+            android:text="Mangle Nicely" />
+
+        <Button
+            android:id="@+id/button_mangle_rudely"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mangle Rudely" />
 
     </LinearLayout>
 

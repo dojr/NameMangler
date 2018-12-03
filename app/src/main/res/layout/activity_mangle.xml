@@ -35,6 +35,24 @@
                 android:text="Re-mangle!"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/send_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send it"/>
+
+            <Button
+                android:id="@+id/add_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add photo"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

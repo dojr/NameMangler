@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DJShamblinNameMangler</string>
+    <string name="reset_dialog">Would you like to reset?</string>
+    <string name="confirm">Yes</string>
 </resources>
